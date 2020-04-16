@@ -7,7 +7,7 @@
         </el-header>
 
         <el-main>
-            <Main></Main>
+            <router-view></router-view>
         </el-main>
 
         <el-footer>
@@ -18,13 +18,11 @@
 
 <script>
 import Footer from './Footer'
-import Main from './Main'
 
 export default {
     name: "Index",
     components: {
-        Footer,
-        Main
+        Footer
     }
 }
 </script>

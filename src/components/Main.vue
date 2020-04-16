@@ -1,7 +1,6 @@
 <template>
     <div class="content">
-        <div class="container" v-for="p in posts" :key="p"></div>
-        <PostCard v-for="post in posts" :key="post.title" :post="post"></PostCard>
+        <PostCard v-for="post in posts" :key="post.id" :post="post"></PostCard>
     </div>
 </template>
 
@@ -15,29 +14,16 @@ export default {
     },
     data() {
         return {
-            title: "Gin 的路由规则 - 介绍2",
-            coverIcon: "https://images-cdn.shimo.im/aPgQikRsvtIyrmxw/image.png",
-            posts: [
-                {title: "Gin 的路由规则 - 介绍"},
-                {title: "Gin 的路由规则 - 介绍1"},
-                {title: "Gin 的路由规则 - 介绍2"},
-                {title: "Gin 的路由规则 - 介绍3"},
-                {title: "Gin 的路由规则 - 介绍4"}
-            ]
+            posts: []
         }
     },
-    methods: {
-        getData() {
-            var that = this
-            this.$axios.get('http://127.0.0.1:8080/get')
-            .then(response => {
-                console.log(response.data)
-                that.posts = response.data.posts
+    created() {
+        var that = this
+        this.$axios.get('http://127.0.0.1:8090/get')
+            .then(rsp => {
+                console.log(rsp.data.posts)
+                that.posts = rsp.data.posts
             })
-            .catch(e => {
-                console.log(e)
-            })
-        }
     }
 }
 </script>
