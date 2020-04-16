@@ -1,20 +1,28 @@
 <template>
     <div class="content">
-        <div class="post-title" v-for="p in posts" :key="p">
-            {{ p.title }}
-        </div>
+        <div class="container" v-for="p in posts" :key="p"></div>
+        <PostCard v-for="post in posts" :key="post.title" :post="post"></PostCard>
     </div>
 </template>
 
 <script>
+import PostCard from "./PostCard"
+
 export default {
     name: "Main",
+    components: {
+        PostCard
+    },
     data() {
         return {
             title: "Gin 的路由规则 - 介绍2",
+            coverIcon: "https://images-cdn.shimo.im/aPgQikRsvtIyrmxw/image.png",
             posts: [
                 {title: "Gin 的路由规则 - 介绍"},
-                {title: "Gin 的路由规则 - 介绍1"}
+                {title: "Gin 的路由规则 - 介绍1"},
+                {title: "Gin 的路由规则 - 介绍2"},
+                {title: "Gin 的路由规则 - 介绍3"},
+                {title: "Gin 的路由规则 - 介绍4"}
             ]
         }
     },
@@ -38,7 +46,6 @@ export default {
 .content {
     height: 800px;
     width: 70%;
-    /* background-color: cornflowerblue; */
     position: relative;
     left: 15%;
 }

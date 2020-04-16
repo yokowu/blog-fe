@@ -19,6 +19,7 @@ export default {
 * {
   padding: 0;
   margin: 0;
+  /* background-color: rgb(250, 250, 250); */
 }
 
 #app {
