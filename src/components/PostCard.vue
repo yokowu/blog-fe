@@ -1,12 +1,12 @@
 <template>
   <div class="card" v-on:click="jump">
-    <!-- <div class="cover-icon" :style="{backgroundImage: 'url(' + post.coverIcon + ')'}"></div> -->
+    <div class="cover-icon" :style="{backgroundImage: 'url(' + post.coverUrl + ')'}"></div>
     <div class="title">
-      {{ post.title }} | {{ post.content }} | {{ post.coverIcon }}
+      {{ post.title }} | {{ post.coverUrl }}
     </div>
-    <div class="content">
-      {{ post.coverIcon }}
-    </div>
+    <!-- <div class="content">
+      {{ post.content }}...
+    </div> -->
   </div>
 </template>
 
@@ -17,7 +17,6 @@ export default {
     methods: {
       jump: function() {
         this.$router.push('/post/' + this.post.id)
-        console.log('======')
       }
     }
 }

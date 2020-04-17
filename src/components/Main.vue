@@ -6,6 +6,7 @@
 
 <script>
 import PostCard from "./PostCard"
+import {getPostDescList} from '../request/api'
 
 export default {
     name: "Main",
@@ -19,11 +20,9 @@ export default {
     },
     created() {
         var that = this
-        this.$axios.get('http://127.0.0.1:8090/get')
-            .then(rsp => {
-                console.log(rsp.data.posts)
-                that.posts = rsp.data.posts
-            })
+        getPostDescList().then(rsp => {
+            that.posts = rsp.data.posts
+        })
     }
 }
 </script>
