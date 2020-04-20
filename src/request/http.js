@@ -4,7 +4,7 @@ import QS from 'qs';
 if (process.env.NODE_ENV == 'production') {    
     axios.defaults.baseURL = 'http://121.36.144.74';
 } else if (process.env.NODE_ENV == 'development') {    
-    axios.defaults.baseURL = 'http://localhost';
+    axios.defaults.baseURL = 'http://localhost:8989';
 } 
 axios.defaults.timeout = 10000;
 axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
