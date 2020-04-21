@@ -2,7 +2,7 @@ import axios from 'axios';
 import QS from 'qs';
 
 if (process.env.NODE_ENV == 'production') {    
-    axios.defaults.baseURL = 'http://121.36.144.74';
+    axios.defaults.baseURL = 'https://www.yokoa.cn';
 } else if (process.env.NODE_ENV == 'development') {    
     axios.defaults.baseURL = 'http://localhost:8989';
 } 

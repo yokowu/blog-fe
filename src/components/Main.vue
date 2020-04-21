@@ -21,6 +21,7 @@ export default {
     created() {
         var that = this
         getPostDescList().then(rsp => {
+            console.log(rsp)
             that.posts = rsp.data.posts
         })
     }
