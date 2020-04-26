@@ -1,9 +1,9 @@
 <template>
-  <div class="card">
+  <div class="card" v-on:click="jump">
     <div class="top-line" :style="randomRgb()"></div>
     <div class="card-box">
       <div class="card-left">
-        <div class="title" v-on:click="jump">
+        <div class="title">
           {{ post.title }}
         </div>
 
@@ -47,7 +47,7 @@ export default {
   margin-right: 20px;
 }
 
-img {
+.img-box img {
   width: auto;
 	height: auto;
 	max-width: 100%;
@@ -68,7 +68,8 @@ img {
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .card-box {

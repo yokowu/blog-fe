@@ -1,7 +1,7 @@
 <template>
     <el-container>
         <el-header class="header" height="60px">
-            <div class="header-title">
+            <div class="header-title" v-on:click="jump">
                 Yoko
             </div>
         </el-header>
@@ -23,6 +23,12 @@ export default {
     name: "Index",
     components: {
         Footer
+    },
+    methods: {
+        jump: function() {
+            console.log("======")
+            this.$router.push('/')
+        }
     }
 }
 </script>
@@ -55,5 +61,9 @@ export default {
     color: rgb(75, 170, 211);
     text-align: left;
     margin-left: 15%;
+}
+
+.header-title:hover {
+    cursor: pointer;
 }
 </style>
