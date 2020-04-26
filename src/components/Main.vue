@@ -31,9 +31,9 @@ export default {
 <style scoped>
 .content {
     height: 800px;
-    width: 70%;
+    width: 60%;
     position: relative;
-    left: 15%;
+    left: 20%;
 }
 
 .post-title {

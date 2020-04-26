@@ -1,19 +1,21 @@
 <template>
   <div class="card">
     <div class="top-line" :style="randomRgb()"></div>
-    <div class="card-left">
-      <div class="title" v-on:click="jump">
-        {{ post.title }} | {{ post.coverUrl }}
+    <div class="card-box">
+      <div class="card-left">
+        <div class="title" v-on:click="jump">
+          {{ post.title }}
+        </div>
+
+        <div class="desc">
+          {{ post.desc }}...
+        </div>
       </div>
 
-      <div class="desc">
-        {{ post.desc }}...
-      </div>
-    </div>
-
-    <div class="card-right" v-if="post.coverUrl">
-      <div class="img-box">
-        <img :src="post.coverUrl" alt="">
+      <div class="card-right" v-if="post.coverUrl">
+        <div class="img-box">
+          <img :src="post.coverUrl" alt="">
+        </div>
       </div>
     </div>
   </div>
@@ -42,6 +44,7 @@ export default {
 .img-box {
   width: 200px;
   height: 200px;
+  margin-right: 20px;
 }
 
 img {
@@ -56,7 +59,6 @@ img {
 }
 
 .card {
-  float: left;
   height: 200px;
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -69,14 +71,13 @@ img {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.card-left {
-  float: left;
-  height: 100%;
-  width: 80%;
+.card-box {
+  display: flex;
 }
 
-.card-right {
-  margin-left: 80%;
+.card-left {
+  width: 60%;
+  flex: 3 0 auto;
 }
 
 .title {
