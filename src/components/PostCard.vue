@@ -1,6 +1,6 @@
 <template>
   <div class="card" v-on:click="jump">
-    <div class="top-line" :style="randomRgb()"></div>
+    <!-- <div class="top-line" :style="randomRgb()"></div> -->
     <div class="card-box">
       <div class="card-left">
         <div class="title">
@@ -61,7 +61,7 @@ export default {
 .card {
   height: 200px;
   width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   transition: 0.3s;
   border-radius: 10px;
   margin-bottom: 20px;

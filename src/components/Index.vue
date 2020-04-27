@@ -45,14 +45,6 @@ export default {
   url('//at.alicdn.com/t/webfont_cf9t8q37wmf.svg#站酷小薇体') format('svg'); /* iOS 4.1- */
 }
 
-.header {
-    height: 400px;
-    /* background-image: url('../assets/nav.png'); */
-    background-repeat: no-repeat;
-    background-position: 10% top;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
-}
-
 .header-title {
     height: 100%;
     font-size: 50px;
@@ -60,7 +52,7 @@ export default {
     font-family: "webfont" !important;
     color: rgb(75, 170, 211);
     text-align: left;
-    margin-left: 15%;
+    margin-left: 21%;
 }
 
 .header-title:hover {
