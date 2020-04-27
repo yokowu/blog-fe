@@ -11,6 +11,9 @@ export default {
   name: 'App',
   components: {
     Index
+  },
+  created() {
+    document.title = "Yoko | 文章列表"
   }
 }
 </script>
