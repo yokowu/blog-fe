@@ -2,6 +2,7 @@
     <div class="container">
         <h2 class="title">{{ post.title }}</h2>
         <mavon-editor
+            id="editor"
             :boxShadow="false"
             boxShadowStyle=""
             defaultOpen="preview"
@@ -32,6 +33,7 @@ export default {
             console.log(rsp)
             this.post = rsp.data
             this.cnt = rsp.data.content
+            document.title = "Yoko | " + rsp.data.title
         }).catch(rsp => {
             console.log(rsp)
         })
@@ -40,6 +42,10 @@ export default {
 </script>
 
 <style scoped>
+#editor {
+    border: none;
+}
+
 .container {
     width: 60%;
     margin: auto;

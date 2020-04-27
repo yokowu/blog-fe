@@ -17,13 +17,3 @@ new Vue({
   render: h => h(App),
   router
 }).$mount('#app')
-
-router.beforeEach((to, from, next) => {
-    if (to.meta.title) {
-        document.title = to.meta.title
-    } else {
-        document.title = "Yoko"
-    }
-
-    next()
-})

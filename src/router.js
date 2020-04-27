@@ -6,7 +6,7 @@ import PostContent from './components/PostContent'
 Vue.use(Router)
 
 const routes = [
-  {path: '/', component: Main, meta: {title: "Yoko | 文章列表"}},
+  {path: '/', component: Main},
   {path: '/post/:id', component: PostContent, props: true}
 ]
 
