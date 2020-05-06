@@ -3,11 +3,16 @@
     <!-- <div class="top-line" :style="randomRgb()"></div> -->
     <div class="card-box">
       <div class="card-left">
-        <div class="title">
+        <div class="card-title">
           {{ post.title }}
         </div>
 
-        <div class="desc">
+        <div class="card-mid">
+          <img src="../assets/date.svg" alt="">
+          {{ post.date }}
+        </div>
+
+        <div class="card-desc">
           {{ post.desc }}...
         </div>
       </div>
@@ -49,9 +54,9 @@ export default {
 
 .img-box img {
   width: auto;
-	height: auto;
-	max-width: 100%;
-	max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   position: relative;
   top:50%;
   left:50%;
@@ -81,7 +86,7 @@ export default {
   flex: 3 0 auto;
 }
 
-.title {
+.card-title {
   font-size: 25px;
   font-weight: 600;
   text-align: left;
@@ -90,7 +95,20 @@ export default {
   color: rgb(53, 124, 153);
 }
 
-.desc {
+.card-mid {
+    font-size: 16px;
+    font-weight: 200;
+    text-align: left;
+    padding-left: 20px;
+    color: rgb(53, 124, 153);
+}
+
+.card-mid img {
+    height: 15px;
+    width: 15px;
+}
+
+.card-desc {
   font-size: 18px;
   font-weight: 300;
   text-align: left;
