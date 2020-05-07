@@ -9,7 +9,12 @@
 
         <div class="card-mid">
           <img src="../assets/date.svg" alt="">
-          {{ post.date }}
+
+          <div class="card-mid-date">
+            {{ post.date }}
+          </div>
+
+          <Tag class="card-mid-tags" v-for="tag in post.tags" :key="tag" :tag="tag"></Tag>
         </div>
 
         <div class="card-desc">
@@ -27,8 +32,13 @@
 </template>
 
 <script>
+import Tag from './Tag'
+
 export default {
     name: "PostCard",
+    components: {
+        Tag
+    },
     props: ['post'],
     methods: {
       jump: function() {
@@ -96,16 +106,29 @@ export default {
 }
 
 .card-mid {
-    font-size: 16px;
-    font-weight: 200;
-    text-align: left;
+    display: flex;
+    height: 18px;
+    width: 100%;
     padding-left: 20px;
-    color: rgb(53, 124, 153);
+    margin-bottom: 5px;
 }
 
 .card-mid img {
-    height: 15px;
+    height: 18px;
     width: 15px;
+}
+
+.card-mid-date {
+    font-size: 16px;
+    font-weight: 200;
+    text-align: left;
+    margin-left: 10px;
+    color: rgb(53, 124, 153);
+}
+
+.card-mid-tags {
+    display: flex;
+    margin-left: 20px;
 }
 
 .card-desc {
