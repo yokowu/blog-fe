@@ -24,13 +24,13 @@ export default {
     },
     methods: {
         $save: function(value, render) {
-            var post = {
+            var p = {
                 content: value,
                 title: this.title,
                 coverUrl: this.coverUrl,
                 desc: render.slice(0, 200)
             }
-            setPost(post).then(rsp => {
+            setPost(p).then(rsp => {
                 console.log(rsp)
             }).catch(rsp => {
                 console.log(rsp)
