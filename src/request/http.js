@@ -3,7 +3,7 @@ import axios from 'axios';
 if (process.env.NODE_ENV == 'production') {    
     axios.defaults.baseURL = 'https://www.yokowu.cn';
 } else if (process.env.NODE_ENV == 'development') {    
-    axios.defaults.baseURL = 'http://localhost:8989';
+    axios.defaults.baseURL = 'http://localhost';
 } 
 axios.defaults.timeout = 10000;
 axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
